@@ -106,11 +106,44 @@ body {
     align-items: center;
 }
 
-.header .container .logo {
-    text-decoration: none;
-    font-size: 30px;
-    color: var(--main-color);
+#logo{
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    position: relative;
+    z-index: 1;
+    opacity: .6;
+    cursor: pointer;
+    transition: var(--main-transition);
+    margin-left: 15px;
 }
+#logo:hover{
+    opacity: 1;
+}
+#logo::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    border-style:solid ;
+    border-color: transparent black transparent transparent;
+    border-width: 0px 20px 10px 0px;
+    z-index: -1;
+}
+
+#logo::after{
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: -5px;
+    border-style:solid ;
+    border-color: transparent red transparent transparent;
+    border-width: 0px 15px 10px 0px;
+    z-index: -1;
+}
+
+
 
 .header .container ul {
     display: flex;
@@ -541,6 +574,7 @@ height: 200%;
     display: grid;
     grid-template-columns:  repeat(auto-fill,minmax(350px,1fr));
     gap: 40px;
+    padding-top: 50px;
 }
 .testimonials .container .box{
     padding: 20px;
